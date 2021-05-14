@@ -33,8 +33,16 @@
 	# What were the name of the functions we used to get a list from a string, and get a string from a list?
 	# Use help(str) on your CLI for more information.
 
-def one(input):
-	return "null"
+def one(input_):
+	numbers = input_.split(',')
+	odd = []
+	for i in numbers:
+		if int(i) % 2 != 0:
+			odd.append(i)
+	if len(odd) > 0:
+		return ",".join(odd)
+	else:
+		return "null"
 
 	# <QUESTION 2>
 
@@ -51,8 +59,12 @@ def one(input):
 	# <HINT>
 	# How did we check if an entry was NOT IN a list?
 
-def two(input):
-	return []
+def two(input_):
+	no_dup = []
+	for i in input_:
+		if i not in no_dup:
+			no_dup.append(i)
+	return no_dup
 
 	# <QUESTION 3>
 
