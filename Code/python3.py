@@ -79,8 +79,13 @@ def two(input_):
 	# <HINT>
 	# How do we choose only the odd numbers when using range()?
 
-def three(input):
-	return ""
+def three(input_):
+	char = list(input_)
+	odd = []
+	for i in range(len(char)):
+		if i % 2 != 0:
+			odd.append(char[i])
+	return "".join(odd)
 
 	# <QUESTION 4>
 
